@@ -25,15 +25,7 @@ export const galleryImageType = defineType({
       name: 'videoYoutube',
       title: 'Vídeo do YouTube',
       type: 'url',
-      description: 'Cole aqui o link do vídeo do YouTube (opcional)',
-      validation: (Rule) => 
-        Rule.uri({
-          scheme: ['http', 'https']
-        }).custom((url) => {
-          if (!url) return true;
-          const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$/;
-          return youtubeRegex.test(url) || 'Insira um link válido do YouTube';
-        })
+      description: 'Cole aqui o link do vídeo do YouTube (opcional)',      
     }),
   ],
   // Adiciona uma pré-visualização no Sanity Studio
